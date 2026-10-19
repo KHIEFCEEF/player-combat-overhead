@@ -1,0 +1,21 @@
+Player Combat Overhead 1.2.0
+RuneLite API/client: 1.13.2 (released artifacts)
+Java: OpenJDK 17; plugin compiled with --release 11
+
+Clean Gradle build: clean test jar launcherDistribution - BUILD SUCCESSFUL
+Overlay tests: 11 passed; 0 failures; 0 errors; 0 skipped
+
+Attackability calculations, range colour settings, and CombatLevelRange class
+were removed from source and the compiled plugin. All combat-level labels use
+one selected colour. Existing text size, height, outline, bold, name, and own
+level settings remain available.
+
+The original nine rendering/state tests pass. Two regression tests verify a
+single chosen colour across combat levels and immediate text-colour changes.
+Tests use actual RuneLite types with mocked game data and Java2D pixel rendering.
+
+Launcher smoke check: java -ea -jar launcher/player-combat-overhead-launcher.jar --help
+Exit code: 0. Plugin and launcher/runtime JAR archives passed CRC checks.
+
+No live OSRS login, live game rendering, or Windows execution was tested.
+Not submitted to or approved by the Plugin Hub.
